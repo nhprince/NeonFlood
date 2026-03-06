@@ -114,7 +114,7 @@ python3 -m neonflood
 ### Linux (Arch / Manjaro)
 
 ```bash
-sudo pacman -Syu python python-tk tk python-pip
+sudo pacman -S python python-tk tk python-pip
 git clone https://github.com/nhprince/NeonFlood.git
 cd NeonFlood
 pip install PySocks
