@@ -81,22 +81,30 @@ class Striker(Process):
 class GorgeousHackerGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("GOLDENEYE ELITE TERMINAL")
+        self.root.title("NeonFlood")
         self.root.geometry("900x750")
         self.root.configure(bg="#050505")
-        
+
         self.active = False
         self.workers = []
         self.log_queue = Queue()
 
         self.setup_ui()
-        
+
+        messagebox.showwarning(
+            "Warning",
+            "NeonFlood is intended for authorized testing only.\n\n"
+            "Do NOT use against systems without permission.\n\n"
+            "Developer: NH Prince\n"
+            "Website: nhprince.dpdns.org"
+        )
+
         # Polling thread for logs
         threading.Thread(target=self.poll_logs, daemon=True).start()
 
     def setup_ui(self):
         # Header Banner
-        banner = ">> GOLDENEYE STRESS ENGINE ACTIVE <<"
+        banner = ">> NeonFlood <<"
         tk.Label(self.root, text=banner, font=("Fixedsys", 20), bg="#050505", fg="#00FF00").pack(pady=15)
 
         # Control Panel
